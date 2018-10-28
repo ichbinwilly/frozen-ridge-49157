@@ -7,3 +7,9 @@ event.on('some_event', function() {
 setTimeout(function() { 
     event.emit('some_event'); 
 }, 5000); 
+
+//blocking example
+var fs = require("fs");
+var data = fs.readFileSync('input.txt');
+console.log(data.toString());
+console.log("µ{§Ç?¦æ?§ô!");
