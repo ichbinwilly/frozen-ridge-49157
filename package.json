@@ -1,0 +1,22 @@
+{
+  "name": "frozen-ridge-49157",
+  "version": "1.0.0",
+  "description": "1. Update the env config\r \t2. auto fetch the amount of photos\r \t3. update the backend of line bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichbinwilly/frozen-ridge-49157.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ichbinwilly/frozen-ridge-49157/issues"
+  },
+  "homepage": "https://github.com/ichbinwilly/frozen-ridge-49157#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
