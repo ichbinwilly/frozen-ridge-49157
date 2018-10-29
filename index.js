@@ -4,9 +4,14 @@ var bodyParser = require('body-parser');
 
 app.user(bodyParser.urlencoded({extended: false}));
 
+var server = app.listen(5000, function () {
+    console.log('Node server is running..');
+});
+
 //event.js ¤å¥ó
 var EventEmitter = require('events').EventEmitter; 
 var event = new EventEmitter(); 
+
 event.on('some_event', function() { 
     console.log('some_event triggered'); 
 }); 
