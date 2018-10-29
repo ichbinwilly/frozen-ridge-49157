@@ -1,3 +1,9 @@
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+
+app.user(bodyParser.urlencoded({extended: false}));
+
 //event.js ¤å¥ó
 var EventEmitter = require('events').EventEmitter; 
 var event = new EventEmitter(); 
