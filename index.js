@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 
 // setting middleware of static file
-app.use(express.static(__dirname + '/images'));
+app.use('/images', express.static(__dirname + '/images'));
 
 var server = app.listen(5000, function () {
     console.log('Node server is running..');
