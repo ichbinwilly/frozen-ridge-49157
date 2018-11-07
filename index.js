@@ -8,18 +8,30 @@ setTimeout(function() {
     event.emit('some_event'); 
 }, 5000); 
 
-//blocking example
-console.log("Sync example");
-var fs = require("fs");
-var data = fs.readFileSync('input.txt');
-console.log(data.toString());
-console.log("program finished");
+var EventEmitter = require('events');
 
-//non-blocking example
-console.log("Async example");
-fs.readFile('input.txt', function (err, data) {
-    if (err) return console.error(err);
-    console.log(data.toString());
+var crazy = new EventEmitter();
+
+crazy.on('event1', function () {
+    console.log('event1 fired!');
+    process.nextTick(function () {
+        crazy.emit('event2');
+    });
 });
 
-console.log("program finished");
+crazy.on('event2', function () {
+    console.log('event2 fired!');
+    process.nextTick(function () {
+        crazy.emit('event3');
+    });
+
+});
+
+crazy.on('event3', function () {
+    console.log('event3 fired!');
+    process.nextTick(function () {
+        crazy.emit('event1');
+    });
+});
+
+crazy.emit('event1');
