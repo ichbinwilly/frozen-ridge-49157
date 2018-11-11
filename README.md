@@ -18,3 +18,4 @@
 	1. Update the env config
 	2. auto fetch the amount of photos
 	3. update the backend of line bot
+	4. make a video to demo
