@@ -19,3 +19,5 @@
 	2. auto fetch the amount of photos
 	3. update the backend of line bot
 	4. make a video to demo
+	5. subscribe channel video
+	6. unsubscribe channel video
