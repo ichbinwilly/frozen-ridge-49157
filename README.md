@@ -21,3 +21,4 @@
 	4. make a video to demo
 	5. subscribe channel video
 	6. unsubscribe channel video
+	7. update the command carousel.test
